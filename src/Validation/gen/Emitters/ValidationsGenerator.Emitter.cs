@@ -224,7 +224,7 @@ namespace Microsoft.Extensions.Validation.Generated
             var localizer = context.ValidationOptions.LocalizerProvider is { } provider
                 ? provider(type, factory)
                 : factory.Create(type ?? typeof(object));
-            var localizedName = localizer[literal];
+            var localizedName = localizer[_literal];
 
             return localizedName.ResourceNotFound ? _literal : localizedName.Value;
         }

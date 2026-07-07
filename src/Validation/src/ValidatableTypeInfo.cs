@@ -449,9 +449,8 @@ public abstract class ValidatableTypeInfo : IValidatableTypeInfo, IValidationErr
         {
             // Create a validation error for each member name that is provided
             var errorMessage = context.ResolveAttributeErrorMessage(
-                memberName,
                 context.ValidationContext.DisplayName,
-                declaringType: Type,
+                type: Type,
                 attribute,
                 result);
 
@@ -473,9 +472,8 @@ public abstract class ValidatableTypeInfo : IValidatableTypeInfo, IValidationErr
         {
             // If no member names are specified, then treat this as a top-level error
             var errorMessage = context.ResolveAttributeErrorMessage(
-                memberName: Type.Name,
                 context.ValidationContext.DisplayName,
-                declaringType: Type,
+                type: Type,
                 attribute,
                 result);
 

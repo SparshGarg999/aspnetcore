@@ -34,20 +34,6 @@ public static class ValidationServiceCollectionExtensions
 #pragma warning restore ASP0029 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
         });
 
-        services.TryAddSingleton<IValidationLocalizer>(sp =>
-        {
-            if (sp.GetService<IStringLocalizerFactory>() is { } factory)
-            {
-                return new ValidationLocalizer(
-                    factory,
-                    sp.GetRequiredService<IOptions<ValidationOptions>>());
-            }
-            else
-            {
-
-            }
-        });
-
         return services;
     }
 }

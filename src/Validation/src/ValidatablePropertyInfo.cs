@@ -289,9 +289,8 @@ public abstract class ValidatablePropertyInfo : IValidatablePropertyInfo, IValid
     void IValidationErrorReporter.ReportError(ValidateContext context, object? container, ValidationAttribute attribute, ValidationResult result)
     {
         var errorMessage = context.ResolveAttributeErrorMessage(
-            memberName: Name,
             context.ValidationContext.DisplayName,
-            declaringType: DeclaringType,
+            type: DeclaringType,
             attribute,
             result);
 
