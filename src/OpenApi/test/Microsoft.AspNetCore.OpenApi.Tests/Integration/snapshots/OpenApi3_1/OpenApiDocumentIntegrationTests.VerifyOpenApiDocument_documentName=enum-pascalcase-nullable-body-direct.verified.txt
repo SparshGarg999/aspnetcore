@@ -47,8 +47,7 @@
         "enum": [
           "Active",
           "Inactive",
-          "Pending",
-          null
+          "Pending"
         ]
       }
     }
