@@ -25,7 +25,13 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PascalCaseStatus"
+                  "type": "string",
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/PascalCaseStatus"
+                    }
+                  ],
+                  "nullable": true
                 }
               }
             }

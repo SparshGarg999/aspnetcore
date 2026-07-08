@@ -31,7 +31,13 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CamelCaseStatus"
+                  "type": "string",
+                  "oneOf": [
+                    {
+                      "$ref": "#/components/schemas/CamelCaseStatus"
+                    }
+                  ],
+                  "nullable": true
                 }
               }
             }
